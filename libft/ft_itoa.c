@@ -1,0 +1,57 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nodoulah <nodoulah@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/15 10:18:28 by nodoulah          #+#    #+#             */
+/*   Updated: 2025/10/23 16:45:37 by nodoulah         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+static int	count_num(int n)
+{
+	int	count;
+
+	count = 0;
+	if (n <= 0)
+		count = 1;
+	while (n != 0)
+	{
+		n /= 10;
+		count++;
+	}
+	return (count);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*str;
+	long	nb;
+	int		i;
+	int		len;
+
+	len = count_num(n);
+	str = malloc(len + 1);
+	if (!str)
+		return (NULL);
+	nb = n;
+	if (nb < 0)
+	{
+		str[0] = '-';
+		nb = -nb;
+	}
+	if (nb == 0)
+		str[0] = '0';
+	i = len - 1;
+	while (nb != 0)
+	{
+		str[i--] = (nb % 10) + '0';
+		nb /= 10;
+	}
+	str[len] = '\0';
+	return (str);
+}

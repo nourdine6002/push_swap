@@ -9,7 +9,7 @@ SRC			= main.c parsing.c handel_error.c swap.c rotate.c rrotate.c push.c \
 
 BONUS_SRC	= checker.c checker_read.c checker_ops.c \
 			  parsing.c handel_error.c swap.c rotate.c rrotate.c push.c \
-			  small_sort.c large1.c large2.c large3.c  main_sort.c large1_norm.c large2_norm.c large3norm.c\
+			  small_sort.c large1.c large2.c large3.c  main_sort.c large1_norm.c large2_norm.c large3_norm.c\
 			  get_next_line/get_next_line.c get_next_line/get_next_line_utils.c
 
 OBJ			= $(SRC:.c=.o)

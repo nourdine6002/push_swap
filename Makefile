@@ -7,10 +7,10 @@ CFLAGS		= -Wall -Wextra -Werror
 SRC			= main.c parsing.c handel_error.c swap.c rotate.c rrotate.c push.c \
 			  small_sort.c large1.c large2.c large3.c main_sort.c large1_norm.c large2_norm.c large3_norm.c
 
-BONUS_SRC	= checker.c checker_read.c checker_ops.c \
+BONUS_SRC	= checker_bonus.c checker_read_bonus.c checker_ops_bonus.c \
 			  parsing.c handel_error.c swap.c rotate.c rrotate.c push.c \
 			  small_sort.c large1.c large2.c large3.c  main_sort.c large1_norm.c large2_norm.c large3_norm.c\
-			  get_next_line/get_next_line.c get_next_line/get_next_line_utils.c
+			  get_next_line_bonus.c get_next_line_utils_bonus.c
 
 OBJ			= $(SRC:.c=.o)
 BONUS_OBJ	= $(BONUS_SRC:.c=.o)

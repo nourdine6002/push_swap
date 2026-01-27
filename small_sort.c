@@ -44,12 +44,3 @@ void	sort_3(t_stack **a)
 	else if (x < y && y > z && x > z)
 		rra(a, 1);
 }
-
-void	sort_5(t_stack **a, t_stack **b)
-{
-	sort_3(a);
-	pa(a, b, 1);
-	sort_2(a);
-	pb(a, b, 1);
-	pb(a, b, 1);
-}

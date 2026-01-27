@@ -43,8 +43,6 @@ int	main(int ac, char **av)
 		sort_2(&a);
 	else if (stack_size(a) == 3)
 		sort_3(&a);
-	else if (stack_size(a) <= 5)
-		sort_5(&a, &b);
 	else
 		sort_large(&a, &b);
 	free_stack(&a);

@@ -38,7 +38,7 @@ int	main(int ac, char **av)
 		return (ft_putstr_fd("Error\n", 2), free_stack(&a), 1);
 	asined_index(a);
 	if (is_sorted(a))
-		return (free_stack(&a), 1);
+		return (free_stack(&a), 0);
 	if (stack_size(a) == 2)
 		sort_2(&a);
 	else if (stack_size(a) == 3)

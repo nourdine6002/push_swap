@@ -30,7 +30,6 @@ typedef struct s_stack
 	struct s_stack	*next;
 }	t_stack;
 
-/* parsing */
 int		hendel_error(t_stack *a);
 void	parsing(int ac, char **av, t_stack **a);
 int		ft_atoi2(char *str, int *error);
@@ -38,7 +37,6 @@ void	free_stack(t_stack **stack);
 int		error_arg(int ac, char **av);
 int		is_sorted(t_stack *stack);
 
-/* operations */
 void	sa(t_stack **a, int print);
 void	sb(t_stack **b, int print);
 void	ss(t_stack **a, t_stack **b, int print);
@@ -51,12 +49,10 @@ void	rra(t_stack **a, int print);
 void	rrb(t_stack **b, int print);
 void	rrr(t_stack **a, t_stack **b, int print);
 
-/* small sort */
 void	sort_2(t_stack **a);
 void	sort_3(t_stack **a);
 void	sort_5(t_stack **a, t_stack **b);
 
-/* large sort */
 int		stack_size(t_stack *s);
 void	asined_index(t_stack *stack);
 void	update_pos(t_stack *stack);
@@ -69,12 +65,9 @@ void	move_cheapest(t_stack **a, t_stack **b);
 void	final_rotate(t_stack **a);
 void	sort_large(t_stack **a, t_stack **b);
 
-/* checker */
 void	run_checker(t_stack **a, t_stack **b);
 int		apply_inst(char *s, t_stack **a, t_stack **b);
 int		is_sorted_idx(t_stack *a);
-
-//
 
 int		non_digit(char *str);
 void	do_rotate_a(t_stack **a, int *cost_a);

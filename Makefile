@@ -31,7 +31,7 @@ $(LIBFT):
 	make -C libft
 	make bonus -C libft
 
-%.o: %.c
+%.o: %.c push_swap.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:

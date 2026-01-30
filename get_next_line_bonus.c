@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "push_swap.h"
 
 static char	*reader(int fd, char *stash)
 {

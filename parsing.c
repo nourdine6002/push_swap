@@ -60,19 +60,6 @@ static void	to_list(int n, t_stack **a)
 	tmp->next = new;
 }
 
-static void	free_splite(char **spliter, t_stack **a)
-{
-	int	j;
-
-	j = 0;
-	ft_putstr_fd("Error\n", 2);
-	free_stack(a);
-	while (spliter[j])
-		free(spliter[j++]);
-	free(spliter);
-	exit(1);
-}
-
 static void	parse_string_to_list(char *str, t_stack **a)
 {
 	int		j;
@@ -83,13 +70,12 @@ static void	parse_string_to_list(char *str, t_stack **a)
 	spliter = ft_split(str, ' ');
 	if (!spliter)
 		return ;
+	free_max_min(spliter);
 	j = 0;
 	while (spliter[j])
 	{
 		error = 0;
 		n = ft_atoi2(spliter[j], &error);
-		if (error == 1)
-			free_splite(spliter, a);
 		to_list(n, a);
 		free(spliter[j]);
 		j++;

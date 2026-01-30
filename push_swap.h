@@ -14,8 +14,14 @@
 # define PUSH_SWAP_H
 
 # include "libft/libft.h"
-# include "get_next_line_bonus.h"
 # include <limits.h>
+# include <stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42 
+# endif
 
 typedef struct s_stack
 {
@@ -36,6 +42,7 @@ int		ft_atoi2(char *str, int *error);
 void	free_stack(t_stack **stack);
 int		error_arg(int ac, char **av);
 int		is_sorted(t_stack *stack);
+void	free_max_min(char **spliter);
 
 void	sa(t_stack **a, int print);
 void	sb(t_stack **b, int print);
@@ -75,5 +82,12 @@ void	do_rotate_b(t_stack **b, int *cost_b);
 void	norm1(t_stack *s);
 t_stack	*pred(t_stack *head, t_stack *end, int need);
 t_stack	*best_end(t_stack *s);
+
+size_t	ft_strlen(const char *str);
+char	*ft_found_line(char *str, char c);
+char	*str_join(char *s1, char *s2);
+char	*sub_str(char *str, int start, int end);
+char	*after_line(char *str);
+char	*get_next_line(int fd);
 
 #endif

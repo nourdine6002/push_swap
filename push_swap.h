@@ -42,7 +42,7 @@ int		ft_atoi2(char *str, int *error);
 void	free_stack(t_stack **stack);
 int		error_arg(int ac, char **av);
 int		is_sorted(t_stack *stack);
-void	free_max_min(char **spliter);
+void	free_max_min(char **spliter, t_stack **a);
 
 void	sa(t_stack **a, int print);
 void	sb(t_stack **b, int print);

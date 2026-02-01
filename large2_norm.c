@@ -12,18 +12,6 @@
 
 #include "push_swap.h"
 
-static void	free_splite(char **spliter)
-{
-	int	j;
-
-	j = 0;
-	ft_putstr_fd("Error\n", 2);
-	while (spliter[j])
-		free(spliter[j++]);
-	free(spliter);
-	exit(1);
-}
-
 void	norm1(t_stack *s)
 {
 	t_stack	*i;
@@ -43,18 +31,18 @@ void	norm1(t_stack *s)
 	}
 }
 
-void	free_max_min(char **spliter)
+void	free_max_min(char **spliter, t_stack **a)
 {
 	int	j;
-	int	error;
 
 	j = 0;
 	while (spliter[j])
 	{
-		error = 0;
-		ft_atoi2(spliter[j], &error);
-		if (error == 1)
-			free_splite(spliter);
+		free(spliter[j]);
 		j++;
 	}
+	free(spliter);
+	free_stack(a);
+	ft_putstr_fd("Error\n", 2);
+	exit(1);
 }

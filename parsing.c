@@ -70,11 +70,15 @@ static void	parse_string_to_list(char *str, t_stack **a)
 	spliter = ft_split(str, ' ');
 	if (!spliter)
 		return ;
-	free_max_min(spliter);
 	j = 0;
 	while (spliter[j])
 	{
 		error = 0;
+		ft_atoi2(spliter[j], &error);
+		if (error == 1)
+		{
+			free_max_min(spliter, a);
+		}
 		n = ft_atoi2(spliter[j], &error);
 		to_list(n, a);
 		free(spliter[j]);

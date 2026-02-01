@@ -14,6 +14,7 @@
 
 static void	error_exit(t_stack **a, t_stack **b)
 {
+	get_next_line(-1);
 	ft_putstr_fd("Error\n", 2);
 	free_stack(a);
 	free_stack(b);

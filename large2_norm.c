@@ -31,17 +31,8 @@ void	norm1(t_stack *s)
 	}
 }
 
-void	free_max_min(char **spliter, t_stack **a)
+void	free_max_min(t_stack **a)
 {
-	int	j;
-
-	j = 0;
-	while (spliter[j])
-	{
-		free(spliter[j]);
-		j++;
-	}
-	free(spliter);
 	free_stack(a);
 	ft_putstr_fd("Error\n", 2);
 	exit(1);

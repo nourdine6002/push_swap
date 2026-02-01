@@ -66,25 +66,26 @@ static void	parse_string_to_list(char *str, t_stack **a)
 	int		error;
 	int		n;
 	char	**spliter;
+	int		valid;
 
 	spliter = ft_split(str, ' ');
 	if (!spliter)
 		return ;
 	j = 0;
+	valid = 0;
 	while (spliter[j])
 	{
 		error = 0;
-		ft_atoi2(spliter[j], &error);
-		if (error == 1)
-		{
-			free_max_min(spliter, a);
-		}
 		n = ft_atoi2(spliter[j], &error);
+		if (error == 1)
+			valid = 1;
 		to_list(n, a);
 		free(spliter[j]);
 		j++;
 	}
 	free(spliter);
+	if (valid == 1)
+		free_max_min(a);
 }
 
 void	parsing(int ac, char **av, t_stack **a)

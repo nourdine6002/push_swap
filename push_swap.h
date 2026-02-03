@@ -13,7 +13,6 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "libft/libft.h"
 # include <limits.h>
 # include <stddef.h>
 # include <stdlib.h>
@@ -89,5 +88,8 @@ char	*str_join(char *s1, char *s2);
 char	*sub_str(char *str, int start, int end);
 char	*after_line(char *str);
 char	*get_next_line(int fd);
+
+void	ft_putstr_fd(char *s, int fd);
+char	**ft_split(char const *s, char c);
 
 #endif

@@ -30,10 +30,3 @@ void	norm1(t_stack *s)
 		i = i->next;
 	}
 }
-
-void	free_max_min(t_stack **a)
-{
-	free_stack(a);
-	ft_putstr_fd("Error\n", 2);
-	exit(1);
-}

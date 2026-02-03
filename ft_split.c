@@ -6,11 +6,11 @@
 /*   By: nodoulah <nodoulah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:23:08 by nodoulah          #+#    #+#             */
-/*   Updated: 2025/10/23 20:58:07 by nodoulah         ###   ########.fr       */
+/*   Updated: 2026/02/03 10:40:24 by nodoulah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
 static size_t	word_count(char const *s, char c)
 {

@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nodoulah <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: nodoulah <nodoulah@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 10:09:18 by nodoulah          #+#    #+#             */
-/*   Updated: 2025/10/15 10:09:21 by nodoulah         ###   ########.fr       */
+/*   Created: 2025/10/15 10:22:53 by nodoulah          #+#    #+#             */
+/*   Updated: 2026/02/03 10:40:20 by nodoulah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-int	ft_isprint(int c)
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (c >= 32 && c <= 126)
-		return (1);
-	return (0);
+	int	i;
+
+	i = 0;
+	if (!s || fd < 0)
+		return ;
+	while (s[i])
+	{
+		if (write(fd, &s[i], 1) == -1)
+			return ;
+		i++;
+	}
 }

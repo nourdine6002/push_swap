@@ -5,7 +5,7 @@ CC			= cc
 CFLAGS		= -Wall -Wextra -Werror
 
 SRC			= main.c parsing.c handel_error.c swap.c rotate.c rrotate.c push.c ft_putstr_fd.c ft_split.c norm1.c\
-			  small_sort.c large1.c large2.c large3.c main_sort.c large1_norm.c large2_norm.c large3_norm.c
+			  small_sort.c large1.c large2.c large3.c main_sort.c large1_norm.c large3_norm.c
 
 BONUS_SRC	= checker_bonus.c checker_read_bonus.c checker_ops_bonus.c norm1.c\
 			  parsing.c handel_error.c swap.c rotate.c rrotate.c push.c \

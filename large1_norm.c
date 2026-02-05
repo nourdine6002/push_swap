@@ -37,30 +37,3 @@ void	update_pos(t_stack *stack)
 		stack = stack->next;
 	}
 }
-
-void	find_lis(t_stack *s)
-{
-	t_stack	*i;
-	t_stack	*end;
-	int		len;
-
-	i = s;
-	while (i)
-	{
-		i->in_lis = 0;
-		i->lis_len = 1;
-		i = i->next;
-	}
-	i = s;
-	norm1(s);
-	end = best_end(s);
-	len = end->lis_len;
-	while (end && len > 0)
-	{
-		end->in_lis = 1;
-		len--;
-		if (len == 0)
-			break ;
-		end = pred(s, end, len);
-	}
-}

@@ -14,13 +14,13 @@
 
 static void	rotate(t_stack **stack)
 {
-	t_stack	*first;
 	t_stack	*last;
+	t_stack	*first;
 
 	if (!stack || !*stack || !(*stack)->next)
 		return ;
 	first = *stack;
-	*stack = first->next;
+	*stack = (*stack)->next;
 	last = *stack;
 	while (last->next)
 		last = last->next;

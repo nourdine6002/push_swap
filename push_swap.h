@@ -30,8 +30,6 @@ typedef struct s_stack
 	int				target_pos;
 	int				cost_a;
 	int				cost_b;
-	int				in_lis;
-	int				lis_len;
 	struct s_stack	*next;
 }	t_stack;
 
@@ -62,8 +60,7 @@ void	sort_5(t_stack **a, t_stack **b);
 int		stack_size(t_stack *s);
 void	asined_index(t_stack *stack);
 void	update_pos(t_stack *stack);
-void	find_lis(t_stack *stack);
-void	push_non_lis(t_stack **a, t_stack **b);
+void	best_push(t_stack **a, t_stack **b);
 void	set_target_pos(t_stack *a, t_stack *b);
 void	calculate_cost(t_stack *a, t_stack *b);
 int		to_abs(int x);
@@ -78,9 +75,6 @@ int		is_sorted_idx(t_stack *a);
 int		non_digit(char *str);
 void	do_rotate_a(t_stack **a, int *cost_a);
 void	do_rotate_b(t_stack **b, int *cost_b);
-void	norm1(t_stack *s);
-t_stack	*pred(t_stack *head, t_stack *end, int need);
-t_stack	*best_end(t_stack *s);
 
 size_t	ft_strlen(const char *str);
 char	*ft_found_line(char *str, char c);

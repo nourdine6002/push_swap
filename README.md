@@ -9,7 +9,7 @@
 The objective of the project is to sort a list of integers stored in **stack A** using a limited set of allowed operations and an auxiliary **stack B**. The program must output a sequence of operations that sorts stack A in ascending order, while stack B is empty at the end.
 
 The main challenge of the project is to minimize the number of operations.  
-To achieve this, the algorithm uses index normalization, the Longest Increasing Subsequence (LIS), and a cost-based reinsertion strategy.
+To achieve this, the algorithm uses index normalization, `**Cheapest Reinsertion Sort**`, and a cost-based reinsertion strategy.
 
 A second program, **checker**, is included to verify that the operations correctly sort the stack.
 
@@ -52,13 +52,12 @@ The checker will display:
 
 - 42 subject: *push_swap*
 - https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
-- https://en.wikipedia.org/wiki/Longest_increasing_subsequence
 - https://en.wikipedia.org/wiki/Sorting_algorithm
 
 ### Use of Artificial Intelligence
 
 AI tools (ChatGPT) were used as a learning and support resource during this project to:
-- Understand algorithmic concepts such as the Longest Increasing Subsequence (LIS)
+- Understand algorithmic concepts such as the Cheapest Reinsertion Sort
 - Clarify cost-based rotation and optimization strategies
 - Help improve explanations and documentation
 
@@ -79,14 +78,12 @@ Test with a larger input:
 ```
 ## Complexity
 
-- Longest Increasing Subsequence calculation: O(n²)
-- Reinsertion phase: O(n²)
+- Cost computation per reinsertion round: O(n²) worst case (scan A for targets + scan B for cheapest)
 - Efficient for the project requirements (100–500 numbers)
 
 ## Project Structure
 
 - `push_swap/` — main sorting program
 - `checker/` — validation program
-- `libft/` — custom C library
 - `get_next_line/` — input reader for checker
 - `Makefile`

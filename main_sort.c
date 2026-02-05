@@ -14,7 +14,7 @@
 
 void	sort_large(t_stack **a, t_stack **b)
 {
-	push_non_lis(a, b);
+	best_push(a, b);
 	while (*b)
 	{
 		update_pos(*a);
